@@ -1,13 +1,6 @@
-// js/ui.js
-// Задача: Создавать HTML элементы и вставлять их в DOM
-
 const mainContent = document.getElementById('main-content'); 
 
-/**
- * Создает HTML-код для одной карточки.
- */
 export function renderListingCard(listing) {
-    // Делаем ссылку на детали через хеш
     return `
         <div class="listing-card">
             <img src="${listing.images[0]}" alt="${listing.title}" class="card-image">
@@ -19,29 +12,21 @@ export function renderListingCard(listing) {
     `;
 }
 
-/**
- * Отображает список объявлений в сетке.
- */
 export function renderListingsGrid(listings) {
-    mainContent.className = 'listings-grid'; // Стиль сетки
+    mainContent.className = 'listings-grid';
     
     if (listings.length === 0) {
         mainContent.innerHTML = '<h2>Ничего не найдено!</h2><p>Попробуйте сбросить фильтры.</p>';
         return;
     }
     
-    // Превращаем массив в одну большую строку HTML и вставляем
     const html = listings.map(renderListingCard).join('');
     mainContent.innerHTML = html;
 }
 
-/**
- * Отображает страницу деталей одного объявления.
- */
 export function renderListingDetails(listing) {
-    mainContent.className = 'listing-details-container'; // Стиль деталей
+    mainContent.className = 'listing-details-container';
 
-    // Генерируем HTML для всех картинок
     const imagesHtml = listing.images.map(imgSrc => 
         `<img src="${imgSrc}" alt="Фото" class="detail-image">`
     ).join('');
