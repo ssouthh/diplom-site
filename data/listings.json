@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "title": "Уютная студия в новом ЖК",
+      "price": 30000,
+      "rooms": 1,
+      "area": 28,
+      "district": "Центральный",
+      "description": "Светлая, чистая студия с новым ремонтом...",
+      "images": ["img/placeholder.jpg"]
+    },
+    {
+      "id": 2,
+      "title": "Двухкомнатная с видом на парк",
+      "price": 45000,
+      "rooms": 2,
+      "area": 55,
+      "district": "Октябрьский",
+      "description": "Просторная квартира рядом с зелёной зоной...",
+      "images": ["img/placeholder.jpg"]
+    }
+]
